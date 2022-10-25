@@ -1,2 +1,2 @@
-# SepaRate-Android
-Science game (Android)
+# SepaRate (Android)
+Science game for Android platform
