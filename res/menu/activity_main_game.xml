@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<item android:id="@+id/game_new"
+          android:icon="@drawable/ic_menu_game_new"
+          android:title="@string/game_new" />
+	
+	<item android:id="@+id/game_pause"
+          android:icon="@drawable/ic_menu_game_pause"
+          android:title="@string/game_pause" />
+	
+	<item android:id="@+id/about"
+          android:icon="@drawable/ic_menu_about"
+          android:title="@string/about" />
+    
+</menu>

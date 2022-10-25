@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/aboutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/about_text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ImageView
+        android:id="@+id/aboutImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/aboutTextView"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/aboutLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutImageView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/webpage"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+</RelativeLayout>

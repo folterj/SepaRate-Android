@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">SepaRate</string>
+    <string name="title_activity_main_game">SepaRate</string>
+    <string name="game_new">New Game</string>
+    <string name="game_pause">Pause</string>
+    <string name="game_resume">Resume</string>
+    <string name="about">About</string>
+    <string name="about_text">SepaRate by J. de Folter</string>
+    <string name="webpage">joostdefolter.info</string>
+    
+</resources>
