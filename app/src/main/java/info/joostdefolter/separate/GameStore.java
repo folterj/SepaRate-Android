@@ -20,13 +20,13 @@ public class GameStore {
 		this.hiscore = hiscore;
 		SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("hiscore", hiscore);
-        editor.commit();
+        editor.apply();
 	}
 	
 	void setHilevel(int hilevel) {
 		this.hilevel = hilevel;
 		SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("hilevel", hilevel);
-        editor.commit();		
+        editor.apply();
 	}
 }

@@ -10,7 +10,6 @@ import android.graphics.RectF;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.SoundPool;
 
 public class GameView implements GameObserver {

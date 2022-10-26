@@ -6,7 +6,7 @@
     <string name="game_pause">Pause</string>
     <string name="game_resume">Resume</string>
     <string name="about">About</string>
-    <string name="about_text">SepaRate by J. de Folter</string>
+    <string name="about_text">SepaRate\nby J. de Folter</string>
     <string name="webpage">joostdefolter.info</string>
     
 </resources>
