@@ -16,11 +16,11 @@
 
     <ImageView
         android:id="@+id/aboutImageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/aboutTextView"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/separate" />
 
     <TextView
         android:id="@+id/aboutLink"
