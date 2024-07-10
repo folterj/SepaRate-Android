@@ -9,7 +9,7 @@ public enum CompCode {
 	Size(5);
 	
 	private final int value;
-	private CompCode(int value) {
+	CompCode(int value) {
         this.value = value;
     }
 	
@@ -24,7 +24,7 @@ public enum CompCode {
 			case 3: return Blue;
 			case 4: return Black;
 		}
-		
+
 		return Empty;
 	}
 }

@@ -59,13 +59,13 @@ public class GameView implements GameObserver {
 		
 		model.registerGameObserver(this);
 		
-		scoreRect = new RectF(0.0f, 0.0f, 0.45f, 0.45f);
-		levelRect = new RectF(0.55f, 0.0f, 1, 0.45f);
-		textRect = new RectF(0.0f, 0.4f, 1.0f, 0.6f);
+		scoreRect = new RectF(0.05f, 0.02f, 0.45f, 0.45f);
+		levelRect = new RectF(0.55f, 0.02f, 0.95f, 0.45f);
+		textRect = new RectF(0.05f, 0.4f, 0.95f, 0.6f);
 
-		objRedRect = new RectF(0.65f, 0.2f, 1, 0.25f);
-		objYelRect = new RectF(0.65f, 0.25f, 1, 0.3f);
-		objBlueRect = new RectF(0.65f, 0.3f, 1, 0.35f);
+		objRedRect = new RectF(0.6f, 0.2f, 0.95f, 0.25f);
+		objYelRect = new RectF(0.6f, 0.25f, 0.95f, 0.3f);
+		objBlueRect = new RectF(0.6f, 0.3f, 0.95f, 0.35f);
 
 		AudioAttributes audioAttr = new AudioAttributes.Builder()
 				.setUsage(AudioAttributes.USAGE_GAME)
@@ -130,19 +130,19 @@ public class GameView implements GameObserver {
 		textPaint.setAntiAlias(true);
 		textPaint.setColor(Color.BLACK);
 		textPaint.setTextAlign(Align.LEFT);
-		textPaint.setTextSize((float)max / 34);			// 480: 14
+		textPaint.setTextSize(max * 0.03f);
 		
 		smalltextPaint.set(textPaint);
-		smalltextPaint.setTextSize((float)max / 60);		// 480: 8
+		smalltextPaint.setTextSize(max * 0.015f);
 
 		centertextPaint.set(textPaint);
 		centertextPaint.setTextAlign(Align.CENTER);
 
 		largetextPaint.set(textPaint);
-		largetextPaint.setTextSize((float)max / 26);		// 480: 18
+		largetextPaint.setTextSize(max * 0.03f);
 
 		hugetextPaint.set(centertextPaint);
-		hugetextPaint.setTextSize((float)max / 6);			// 480: 80
+		hugetextPaint.setTextSize(max * 0.15f);
 
 		initialised = true;
 	}
@@ -177,8 +177,8 @@ public class GameView implements GameObserver {
 	}
 	
 	void drawGame(Canvas canvas) {
-		String s[];
-		String sobj = "";
+		String[] s;
+		String sobj;
 		String text;
 		boolean sflash = false;
 		boolean flashon0;
@@ -212,7 +212,7 @@ public class GameView implements GameObserver {
 					model.cont.get(i).setCustString(util.getLevelString(i));
 				else
 					model.cont.get(i).setCustString(
-							"LEVEL " + util.getLevelString(i * 2 - 1));
+							"    " + util.getLevelString(i * 2 - 1));
 			}
 		} else if (model.gameMode == GameMode.Brief) {
 			if (model.level > 0)
@@ -391,8 +391,8 @@ public class GameView implements GameObserver {
 	}
 	
 	void DrawString(Canvas canvas, String s, boolean flash) {
-		String s1[] = s.split("\n");
-		String s2[];
+		String[] s1 = s.split("\n");
+		String[] s2;
 		String s0;
 		float x, y;
 		float ty = 0;

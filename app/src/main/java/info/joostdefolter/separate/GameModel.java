@@ -141,7 +141,7 @@ public class GameModel {
 				// demo/help movement
 				demoCont = 1;
 				for (int i = 0; i < feed.size(); i++) {
-					if (feed.get(i).size() > 0) {
+					if (!feed.get(i).isEmpty()) {
 						code = feed.get(i).get(0).code;
 						break;
 					}

@@ -1,5 +1,6 @@
 package info.joostdefolter.separate;
 
+import java.io.Serial;
 import java.util.Vector;
 
 import android.graphics.Canvas;
@@ -8,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 
 public class Comps extends Vector<Comp> {
+	@Serial
 	private static final long serialVersionUID = 76797250491777563L;
 
 	int color;
@@ -19,26 +21,19 @@ public class Comps extends Vector<Comp> {
 		wavepos = 0;
 	}
 
-	void insertFirst(Comp comp) {
+	public void addFirst(Comp comp) {
 		insertElementAt(comp, 0);
 	}
 
-	void removeLast() {
-		removeElementAt(size() - 1);
+	public Comp removeLast() {
+		int index = size() - 1;
+		Comp value = elementAt(index);
+		removeElementAt(index);
+		return value;
 	}
 
 	void add(CompCode code) {
 		add(new Comp(code));
-	}
-
-	boolean contains(CompCode code) {
-		boolean found = false;
-		
-		for (int i = 0; i < size(); i++) {
-			if (elementAt(i).code == code)
-				found = true;
-		}
-		return found;
 	}
 
 	void updatePurity() {

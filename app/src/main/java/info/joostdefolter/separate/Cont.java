@@ -1,5 +1,6 @@
 package info.joostdefolter.separate;
 
+import java.io.Serial;
 import java.util.Random;
 import java.util.Vector;
 
@@ -13,6 +14,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 
 public class Cont extends Vector<Comps> {
+	@Serial
 	private static final long serialVersionUID = -2863492380541539285L;
 
 	Vector<PointF> bubbles = new Vector<>();
@@ -68,7 +70,7 @@ public class Cont extends Vector<Comps> {
 	}
 
 	void addComp(Comps comps) {
-		if (!isOverFull() && (comps.size() > 0 || feed))
+		if (!isOverFull() && (!comps.isEmpty() || feed))
 			add(comps);
 		updatePurity();
 	}
@@ -79,7 +81,7 @@ public class Cont extends Vector<Comps> {
 		
 		while (isOverFull()) {
 			cont.addComp(elementAt(0));
-			if (elementAt(0).size() > 0)
+			if (!elementAt(0).isEmpty())
 				moved = true;
 			this.remove(0);
 		}
@@ -87,7 +89,7 @@ public class Cont extends Vector<Comps> {
 		for (int i = 0; i < size() - 1; i++) {
 			maxcomp = elementAt(i).size();
 			if (maxcomp > 1) {
-				elementAt(i + 1).insertFirst(elementAt(i).elementAt(maxcomp - 1));
+				elementAt(i + 1).addFirst(elementAt(i).elementAt(maxcomp - 1));
 				elementAt(i).removeLast();
 			}
 		}
